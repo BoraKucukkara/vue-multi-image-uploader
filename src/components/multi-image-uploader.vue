@@ -74,22 +74,22 @@ export default {
 .images-container-empty {
   justify-content: center;
 }
-.images-container > *, .images-container > * > *{
-  transition: all .5s;
-}
 .image, .image-select, .image-upload {
   width: 10rem;
   height: 10rem;
   position: relative;
   border-radius: .5rem;
+  transition: all .3s;
+  animation: fade-in .5s ease forwards;
 }
 .image-select {
-  border:3px dashed #adadad;
+  border:.2rem dashed #adadad;
   color: #adadad;
   display: grid;
   place-items: center;
   cursor: pointer;
   background: #f5f5f5;
+
 }
 .image-select:hover {
   background: #faf0d5;
@@ -103,11 +103,12 @@ export default {
   align-items: center;
   cursor: pointer;
   background: #f5f5f5;
+  border:.2rem solid transparent;
 }
 .image-upload:hover {
   background: #fff;
   color: #17ad23;
-  border:3px solid #17ad23;
+  border:.2rem solid #17ad23;
 }
 .image-upload > svg {
   height: 1.5rem;
@@ -141,6 +142,9 @@ span {
   bottom: 0.5rem;
   left: 0.5rem;
   padding: .2rem .5rem;
+}
+@keyframes fade-in {
+  from {opacity: 0; transform: scale(0%);}
 }
 
 </style>
