@@ -1,26 +1,31 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <multi-image-uploader />
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MultiImageUploader from './components/multi-image-uploader.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    MultiImageUploader
   }
 }
 </script>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+/* RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  margin:0;
+  font-family: system-ui;
 }
 </style>
